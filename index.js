@@ -1,9 +1,21 @@
 var katzDeli = [];
 
-function takeANumber(katzDeliLine, name){
-  katzDeliLine.push(name);
-  var position = katzDeliLine.length;
-  return 'Welcome, ' + name + '. You are number ' + position + ' in line.'
+// function takeANumber(katzDeliLine, name){
+//   katzDeliLine.push(name);
+//   var position = katzDeliLine.length;
+//   return 'Welcome, ' + name + '. You are number ' + position + ' in line.'
+// }
+
+function takeANumber(katzDeliLine){
+  var position = 0;
+  if (katzDeliLine.length === 0){
+    position = 1
+  }
+  else{
+    position = katzDeliLine[katzDeliLine.length - 1] + 1
+  }
+  katzDeliLine.push(position)
+  return 'Welcome. You are number ' + position + ' in line.'
 }
 
 function nowServing(katzDeliLine){
